@@ -6,7 +6,7 @@ module.exports = {
 		'./index.js'
 	],
 	output : {
-		filename : 'bundle.js',
+		filename : 'build/bundle.js',
 		sourceMapFilename: '[name].map'
 	},
 	module : {
@@ -14,6 +14,11 @@ module.exports = {
 			{
 				test : /\.js$/,
 				loader : 'babel?presets[]=es2015', // use inline preset config for multiple loader
+				exclude : /node_modules/
+			},
+			{
+				test : /\.pug$/,
+				loader : 'pug-loader',
 				exclude : /node_modules/
 			}
 		]
