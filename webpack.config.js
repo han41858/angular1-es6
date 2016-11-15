@@ -6,8 +6,8 @@ module.exports = {
 		'./index.js'
 	],
 	output : {
-		filename : 'build/bundle.js',
-		sourceMapFilename: '[name].map'
+		path : './build',
+		filename : 'bundle.js'
 	},
 	module : {
 		loaders : [

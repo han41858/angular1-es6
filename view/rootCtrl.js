@@ -6,4 +6,8 @@ export default class RootCtrl {
 	constructor () {
 		console.log('RootCtrl.constructor()');
 	}
+
+	select () {
+		console.log('RootCtrl.select()');
+	}
 }
