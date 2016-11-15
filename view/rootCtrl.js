@@ -5,6 +5,8 @@
 export default class RootCtrl {
 	constructor () {
 		console.log('RootCtrl.constructor()');
+
+		this.title = 'this is title';
 	}
 
 	select () {
