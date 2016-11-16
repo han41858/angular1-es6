@@ -6,6 +6,7 @@ import angular from 'angular';
 import ngRoute from 'angular-route';
 
 import RootCtrl from './view/rootCtrl';
+import MyDirective from './view/MyDirective';
 
 const main = () => {
 	console.log('main()');
@@ -33,6 +34,8 @@ const main = () => {
 	});
 
 	ngApp.controller('RootCtrl', RootCtrl);
+
+	ngApp.directive('myDirective', () => new MyDirective);
 };
 
 main();
