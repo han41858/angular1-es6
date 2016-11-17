@@ -5,10 +5,10 @@
 import angular from 'angular';
 import ngRoute from 'angular-route';
 
-import RootCtrl from './view/rootCtrl';
+import HomeCtrl from './view/homeCtrl';
 import MyDirective from './view/MyDirective';
 
-const main = () => {
+(() => {
 	console.log('main()');
 
 	const ngApp = angular.module('angular1es6', ['ngRoute']);
@@ -18,8 +18,8 @@ const main = () => {
 
 		$routeProvider
 			.when('/', {
-				template : require('./view/rootCtrl.pug'),
-				controller : 'RootCtrl',
+				template : require('./view/home.pug'),
+				controller : 'HomeCtrl',
 				controllerAs : 'Ctrl'
 			})
 			.otherwise({
@@ -33,9 +33,7 @@ const main = () => {
 		});
 	});
 
-	ngApp.controller('RootCtrl', RootCtrl);
+	ngApp.controller('HomeCtrl', HomeCtrl);
 
 	ngApp.directive('myDirective', () => new MyDirective);
-};
-
-main();
+})();

@@ -2,14 +2,14 @@
  * Created by Han on 2016-11-15.
  */
 
-export default class RootCtrl {
+export default class HomeCtrl {
 	constructor () {
-		console.log('RootCtrl.constructor()');
+		console.log('HomeCtrl.constructor()');
 
 		this.title = 'this is title';
 	}
 
 	select () {
-		console.log('RootCtrl.select()');
+		console.log('HomeCtrl.select()');
 	}
 }
