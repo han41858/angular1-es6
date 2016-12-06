@@ -7,6 +7,9 @@ import ngRoute from 'angular-route';
 
 import HomeCtrl from './view/homeCtrl';
 import MyDirective from './view/MyDirective';
+import MyService from './view/MyService';
+
+import uppercase from './view/uppercase.filter';
 
 (() => {
 	console.log('main()');
@@ -36,4 +39,6 @@ import MyDirective from './view/MyDirective';
 	ngApp.controller('HomeCtrl', HomeCtrl);
 
 	ngApp.directive('myDirective', () => new MyDirective);
+	ngApp.service('MyService', MyService);
+	ngApp.filter('uppercase', uppercase);
 })();

@@ -3,13 +3,22 @@
  */
 
 export default class HomeCtrl {
-	constructor () {
+	constructor ($scope) {
 		console.log('HomeCtrl.constructor()');
 
-		this.title = 'this is title';
+		this.$scope = $scope;
+
+		this.count = 0;
 	}
 
 	select () {
 		console.log('HomeCtrl.select()');
+
+		return Promise.resolve()
+			.then(() => {
+				this.count++;
+
+				this.$scope.$apply();
+			});
 	}
 }
